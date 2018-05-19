@@ -4,7 +4,11 @@ Hello
 
 
 <ul>
-    <li class="text" *ngFor="let item of items">
-      {{item.body}}
+    <li class="text" *ngFor="let item of items | async">
+      {{item.body}} - opublikowana - {{item.timestamp.seconds*1000 | date}} - przez: {{item.sender}}
     </li>
 </ul>
+
+
+<app-form1 (formSubmit)="addProduct($event)"></app-form1>
+
