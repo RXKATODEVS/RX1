@@ -1,11 +1,7 @@
-<p>
-  form1 works!
-</p>
-
 
 <form [formGroup]="form" (ngSubmit)="formSubmitSubject.next()">
             <label>Name</label>
-            <input type="text" [formControlName]="'body'"/>
+            <textarea [formControlName]="'body'"></textarea>
        
             <div>
                 <button type="reset">Reset</button>

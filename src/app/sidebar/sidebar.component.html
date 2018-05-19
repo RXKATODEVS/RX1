@@ -1,0 +1,23 @@
+<p>
+  Links 1
+</p>
+
+<ul>
+    <li class="text" *ngFor="let link of links | async | wytnij">
+    	<p [innerHtml]="link | linczor"></p>
+    </li>
+</ul>
+
+<br/>
+<hr/>
+<br/>
+
+<p>
+  Youtubes
+</p>
+
+<ul>
+    <li class="text" *ngFor="let link of links | async | wytnij:'youtube'">
+    	<p [innerHtml]="link | linczor"></p>
+    </li>
+</ul> 

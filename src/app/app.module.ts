@@ -6,11 +6,21 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { Form1Component } from './form1/form1.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MessegeComponent } from './messege/messege.component';
+import { LinczorPipe } from './linczor.pipe';
+import { YoutubeframeComponent } from './youtubeframe/youtubeframe.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { WytnijPipe } from './wytnij.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Form1Component
+    Form1Component,
+    MessegeComponent,
+    LinczorPipe,
+    YoutubeframeComponent,
+    SidebarComponent,
+    WytnijPipe
   ],
   imports: [
     BrowserModule,

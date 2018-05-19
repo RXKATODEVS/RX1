@@ -2,13 +2,21 @@
 
 Hello
 
+<div class="left-side">
 
 <ul>
     <li class="text" *ngFor="let item of items | async">
-      {{item.body}} - opublikowana - {{item.timestamp.seconds*1000 | date}} - przez: {{item.sender}}
+    	<app-messege 
+    		[body]="item.body" 
+    		[sender]="item.sender"
+    		[date]="item.timestamp.seconds"
+    		>
+    		</app-messege>
     </li>
 </ul>
 
-
 <app-form1 (formSubmit)="addProduct($event)"></app-form1>
 
+</div>
+
+<app-sidebar [links]="links"></app-sidebar>
