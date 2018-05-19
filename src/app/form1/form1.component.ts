@@ -36,7 +36,7 @@ export class Form1Component implements OnInit {
       console.log("Zapisz", messege);
     }
 
-	// ngOnInit() {
-	// }
+	ngOnInit() {
+	}
 
 }

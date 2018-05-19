@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { Form1Component } from 'form1/form1.component'
+import { Form1Component } from './form1/form1.component'
 import { MessegesService } from './messeges.service'
 
 @Component({
