@@ -9,8 +9,20 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'app';
-  items: Observable<any[]>;
+  //items: Observable<any[]>;
+  items: any;
+
   constructor(db: AngularFirestore) {
-    this.items = db.collection('Messeges').valueChanges();
+    db.collection('Messeges').valueChanges().subscribe(items => {
+
+      items.sort((a, b) => {
+        return a['timestamp']['seconds'] - b['timestamp']['seconds'];
+      })
+
+      console.log(items);
+
+      this.items = items;
+    });
+
   }
 }
